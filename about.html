@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Le Gourmet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="webbsida.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="webbsida.html">Le Gourmet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="webbsida.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservations</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-page">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h1 class="text-center gold-text mb-5">Our Story</h1>
+                    <div class="about-content">
+                        <div class="chef-section mb-5">
+                            <img src="images/chef.jpg" alt="Head Chef" class="chef-image mb-4">
+                            <p class="lead">Welcome to Le Gourmet, where culinary artistry meets exceptional dining.</p>
+                            <p>Established in 1995 by renowned Chef Marcus Lindström, Le Gourmet has become Stockholm's premier destination for fine dining. Our two Michelin stars reflect our unwavering commitment to culinary excellence.</p>
+                        </div>
+
+                        <div class="philosophy-section mb-5">
+                            <h2 class="gold-text">Our Philosophy</h2>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <img src="images/kitchen.jpg" alt="Our Kitchen" class="img-fluid mb-3">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>We believe in creating unforgettable dining experiences through innovative cuisine that honors Swedish traditions while embracing global influences. Each dish tells a story of passion, precision, and the finest ingredients.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="awards-section mb-5">
+                            <h2 class="gold-text">Awards & Recognition</h2>
+                            <ul>
+                                <li>Two Michelin Stars (2015-Present)</li>
+                                <li>Best Restaurant in Scandinavia 2022</li>
+                                <li>Wine Spectator Grand Award 2023</li>
+                                <li>Nordic Prize for Culinary Excellence 2021</li>
+                            </ul>
+                        </div>
+
+                        <div class="visit-section mt-5">
+                            <h2 class="gold-text">Visit Us</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Location</h3>
+                                    <p>Strandvägen 1<br>114 51 Stockholm<br>Sweden</p>
+                                    
+                                    <h3>Contact</h3>
+                                    <p>Tel: +46 8 555 555<br>
+                                    Email: info@legourmet.se</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Hours</h3>
+                                    <p>Tuesday - Saturday<br>
+                                    Dinner: 18:00 - 23:00<br>
+                                    (Last seating at 21:00)</p>
+                                    
+                                    <h3>Dress Code</h3>
+                                    <p>Smart Elegant</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-container mt-5">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="webbsida.js"></script>
+</body>
+</html>
