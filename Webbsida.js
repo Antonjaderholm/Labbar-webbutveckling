@@ -4,32 +4,32 @@ const menuItems = [
         id: 1,
         name: "Caviar & Blini",
         description: "Premium Osetra caviar served with traditional garnishes",
-        price: 150,
-        image: "images/caviar.jpg",
+        price: 65,
+        image: "images/C.jpg",
         category: "starters"
     },
     {
         id: 2,
         name: "Foie Gras Terrine",
         description: "House-made terrine with brioche and fig jam",
-        price: 95,
-        image: "images/foiegras.jpg",
+        price: 60,
+        image: "images/B.jpg",
         category: "starters"
     },
     {
         id: 3,
         name: "Lobster Thermidor",
         description: "Whole lobster with cognac cream sauce",
-        price: 180,
-        image: "images/lobster.jpg",
+        price: 120,
+        image: "images/BB.jpg",
         category: "mains"
     },
     {
         id: 4,
         name: "Wagyu A5 Tenderloin",
         description: "Japanese A5 Wagyu with truffle sauce",
-        price: 250,
-        image: "images/wagyu.jpg",
+        price: 150,
+        image: "images/CC.jpg",
         category: "mains"
     },
     {
@@ -37,16 +37,16 @@ const menuItems = [
         name: "Soufflé au Chocolat",
         description: "Grand cru chocolate soufflé with vanilla ice cream",
         price: 45,
-        image: "images/souffle.jpg",
+        image: "images/A.jpg",
         category: "desserts"
     },
     {
         id: 6,
-        name: "Truffle Risotto",
-        description: "Arborio rice with black truffle and parmesan",
+        name: "Golden Chocolat",
+        description: "Golden chocolat road with vanilia cream & pistachio nuts",
         price: 45,
-        image: "images/risotto.jpg",
-        category: "mains"
+        image: "images/jj.jpg",
+        category: "desserts"
     }
 ];
 
@@ -121,7 +121,7 @@ function removeFromCart(index) {
 
 function updateCart() {
     const cartItems = document.getElementById('cart-items');
-    if (!cartItems) return;
+    const cartTotal = document.getElementById('cart-total');
     
     cartItems.innerHTML = '';
     let total = 0;
@@ -139,10 +139,7 @@ function updateCart() {
         cartItems.appendChild(cartItem);
     });
 
-    cartItems.innerHTML += `
-        <div class="total mt-3 fw-bold">Total: $${total}</div>
-        ${cart.length > 0 ? '<button onclick="proceedToReservation()" class="btn btn-gold w-100 mt-3">Proceed to Reservation</button>' : ''}
-    `;
+    cartTotal.innerHTML = `<div class="total mt-3 fw-bold">Total: $${total}</div>`;
 }
 
 // Utility Functions
@@ -231,4 +228,25 @@ function showConfirmation(data) {
         </div>
     `;
     document.body.appendChild(modal);
+}
+function filterMenu(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    const buttons = document.querySelectorAll('.menu-options button');
+
+    // Update active button
+    buttons.forEach(button => {
+        button.classList.remove('active');
+        if (button.textContent.toLowerCase().includes(category)) {
+            button.classList.add('active');
+        }
+    });
+
+    // Filter menu items
+    menuItems.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
 }
