@@ -2,9 +2,9 @@
 :root {
     --gold: #D4AF37;
     --black: #000000;
-    --dark-gray: #1A1A1A;
+    --dark-gray: #3d3d3d;
     --light-gold: #F4E4BC;
-    --gold-transparent: rgba(212, 175, 55, 0.1);
+    --gold-transparent: rgba(60, 60, 60, 0.1);
 }
 
 /* Base Styles */
@@ -35,11 +35,11 @@ body {
     text-shadow: 0 0 10px var(--gold);
 }
 
-/* Hero Section */
+
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('images/restaurant-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('images/l.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -53,7 +53,7 @@ body {
     font-size: 4rem;
     color: var(--gold);
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px rgba(8, 241, 241, 0.5);
+    text-shadow: 0 0 20px rgba(0, 221, 255, 0.5);
 }
 
 
