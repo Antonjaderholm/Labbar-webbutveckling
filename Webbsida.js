@@ -1,22 +1,4 @@
 
-// Map Initialization
-function initMap() {
-    const restaurantLocation = { lat: 57.7089, lng: 11.9746 }; // Gothenburg coordinates
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: restaurantLocation,
-        styles: [
-            // Add custom map styles here
-        ]
-    });
-    
-    const marker = new google.maps.Marker({
-        position: restaurantLocation,
-        map: map,
-        title: "Le Gourmet"
-    });
-}
-
 // Menu Display Functions
 function displayMenu(category = 'all') {
     const menuContainer = document.getElementById('menu-items');
